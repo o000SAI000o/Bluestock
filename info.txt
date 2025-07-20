@@ -31,16 +31,7 @@ Install psql (CLI tool for running queries)
 Open VS Code
 Go to Extensions (Ctrl + Shift + X)
 Search for "PostgreSQL" and install PostgreSQL extension by Microsoft
-Click on "Add New Connection" → Enter:
-
-{
-PGHOST=localhost
-PGUSER=postgres
-PGPASSWORD=$@!25
-PGDATABASE=bluestock_ipo
-PGPORT=5432
-}
-
+Click on "Add New Connection" → 
 ✅ Now you are connected to PostgreSQL in VS Code.
 
 ####################################################################################################################################
