@@ -16,6 +16,7 @@ The application provides **real-time IPO (Initial Public Offering) information**
 📅 **Start Date:** 02/02/2025  
 📅 **Deadline:** Flexible (as per team lead)
 
+
 ---
 
 ## 📢 Objective
@@ -37,6 +38,8 @@ Develop a scalable application to share IPO-related data with the public, includ
 * **Tools:** GitHub, Postman, Notion, Google Workspace
 
 ---
+
+![3316b44b-0b7d-4910-83a5-ac2d960da240](https://github.com/user-attachments/assets/491f5c1e-b15a-4224-ab09-f901df5a21ce)
 
 ## 👨‍💻 Team Members & Contributions
 
