@@ -161,6 +161,7 @@ bluestock-ipo/
 <img width="831" height="467" alt="image" src="https://github.com/user-attachments/assets/6d62d10a-7032-4b76-8fdf-317901f87ec1" />
 
 
+
 2.Homepage
 <img width="831" height="468" alt="image" src="https://github.com/user-attachments/assets/96a86a49-1890-4080-91a3-170d078604be" />
 
