@@ -1,4 +1,7 @@
-<img width="831" height="468" alt="image" src="https://github.com/user-attachments/assets/82c3d3aa-5f9e-4795-90ee-1269b3163760" />
+<img width="429" height="360" alt="image" src="https://github.com/user-attachments/assets/50188b9a-eed7-48d4-a092-f865e5810e5f" />
+
+
+
 # 📈 Bluestock IPO Information Web Application
 
 A **full-stack web application & REST API** developed during my internship at **Bluestock Fintech**.  
@@ -152,7 +155,8 @@ bluestock-ipo/
 * [System Design Board](https://www.figma.com/board/g9bjreevYNJkfMuwRacyaP/System-Design?t=rhom7O3DRl5pdHkG-1)
 
 
-## 🖼️ Screenshots of some important webpages 
+## 🖼️ Screenshots of some important webpages
+
 1. Landing Page
 <img width="831" height="467" alt="image" src="https://github.com/user-attachments/assets/6d62d10a-7032-4b76-8fdf-317901f87ec1" />
 
