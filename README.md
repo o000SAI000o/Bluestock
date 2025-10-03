@@ -94,31 +94,29 @@ node_modules/
 
 ```
 bluestock-ipo/
-│── backend/                     # Node.js Backend
-│   ├── config/
-│   │   └── database.js          # PostgreSQL Connection
-│   ├── models/
-│   │   ├── User.js
-│   │   ├── Company.js
-│   │   ├── IPO.js
-│   │   └── Subscription.js
-│   ├── routes/
-│   │   ├── userRoutes.js
-│   │   ├── companyRoutes.js
-│   │   ├── ipoRoutes.js
-│   │   └── subscriptionRoutes.js
-│   ├── controllers/
-│   │   ├── userController.js
-│   │   ├── companyController.js
-│   │   ├── ipoController.js
-│   │   └── subscriptionController.js
-│   └── index.js
-│
-│── database/
-│   ├── schema.sql               # Database Schema
-│
-│── frontend/                    
+│── .vscode/                  # VSCode settings
+│── Frontend/                 # Bootstrap UI
+│── config/                   # Database and app configurations
+│── controllers/              # Business logic for API endpoints
+│── middleware/               # Middleware (auth, error handling)
+│── models/                   # Sequelize models
+│── node_modules/             # Node dependencies
+│── routes/                   # API routes
+│── server/                   # Server-related utilities (if needed)
+│── src/                      # Optional source code folder
+│── Internship_Report_final.docx
+│── LICENSE
 │── README.md
+│── db_schema.txt
+│── img-urls.txt
+│── info.md
+│── info.txt
+│── ipo.js
+│── ipoRoutes.js
+│── package-lock.json
+│── package.json
+│── server.js
+
 ```
 
 ---
