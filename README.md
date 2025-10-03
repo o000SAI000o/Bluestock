@@ -116,9 +116,8 @@ bluestock-ipo/
 │
 │── database/
 │   ├── schema.sql               # Database Schema
-│   └── seed.sql                 # Sample Data
 │
-│── frontend/                     # Bootstrap UI (if needed)
+│── frontend/                    
 │── README.md
 ```
 
