@@ -1,195 +1,164 @@
-# Bluestock IPO Information Web Application
+# 📈 Bluestock IPO Information Web Application
 
-A full-stack **IPO (Initial Public Offering) Information Web Application** built during my internship at **Bluestock Fintech**.
-This project provides **real-time IPO tracking, RESTful APIs, and an investor-friendly UI**, aiming to simplify IPO data access for users.
-
----
-
-## 📌 Project Overview
-
-The project is designed to offer structured IPO data (upcoming, ongoing, and past IPOs) via a backend API and a responsive frontend.
-It provides insights such as company details, issue size, price band, subscription trends, and allotment status.
-
-* **Backend**: Node.js + Express.js
-* **Database**: PostgreSQL
-* **Frontend**: HTML5, Bootstrap 5, JavaScript
-* **Deployment**: Render (Monorepo deployment)
+A **full-stack web application & REST API** developed during my internship at **Bluestock Fintech**.
+The application provides **real-time IPO (Initial Public Offering) information** with secure backend APIs and a responsive frontend.
 
 ---
 
-## ✨ Features
+## 🚀 Project Overview
 
-### 🔹 User-Facing Features
+* **Company:** Bluestock Fintech
+* **Website:** [Bluestock Website](http://www.bluestock.in/)
+* **Project Type:** Web Application & REST API
+* **Tech Stack:** Node.js (Express.js), PostgreSQL, Bootstrap 5, JavaScript
 
-* User authentication (JWT, bcrypt password hashing)
-* View IPOs categorized as **Upcoming, Ongoing, Past**
-* IPO details: price band, issue size, subscription data, company background
-* IPO dashboard with analytics view
-* Personalized watchlist (in progress)
-* Profile & settings management
+📅 **Start Date:** 02/02/2025
+📅 **Deadline:** Flexible (as per team lead)
 
-### 🔹 Admin/Backend Features
+---
 
-* REST API with multiple endpoints for IPOs, users, transactions, and watchlists
-* Secure authentication with JWT
-* PostgreSQL relational database schema for structured storage
-* API testing via Postman
-* Deployment with environment-based configuration
+## 📢 Objective
+
+Develop a scalable application to share IPO-related data with the public, including:
+
+* ✅ Company Name & Logo
+* ✅ IPO Price, Listing Date, Market Price
+* ✅ Issue Size, Type, Status
+* ✅ Downloadable RHP & DRHP PDFs
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Frontend**:
-
-* HTML5, CSS3, Bootstrap 5, JavaScript
-
-**Backend**:
-
-* Node.js, Express.js
-
-**Database**:
-
-* PostgreSQL, pg package, pgAdmin
-
-**Version Control**:
-
-* Git, GitHub
-
-**Testing**:
-
-* Postman
-
-**Deployment**:
-
-* Render (monorepo hosting)
+**Backend:** Node.js with Express.js (RESTful APIs)
+**Database:** PostgreSQL (pgAdmin for management)
+**Frontend:** HTML, CSS, Bootstrap 5, JavaScript
+**Tools:** GitHub, Postman, Notion, Google Workspace
 
 ---
 
-## ⚙️ Setup & Installation
+## 👨‍💻 Team Members
 
-### 1. Clone the Repository
+| **SR. No** | **Name**                                 | **Role**     | **Assigned Task**                                                                  |
+| ---------- | ---------------------------------------- | ------------ | ---------------------------------------------------------------------------------- |
+| 1          | Vishwajeet Shrikrishna Deshmane          | Team Lead    | GitHub setup, JWT Authentication, PostgreSQL schema design, CRUD APIs, Integration |
+| 2          | Venkata Akash Kumar Yeginati             | Co-Team Lead | Backend logic, Core API routes, Node.js + PostgreSQL integration, Authentication   |
+| 3          | Prerna Rahul Waghmare                    | Developer    | Frontend UI (Bootstrap 5), IPO listings, Company fetch & integration               |
+| 4          | Priyadarshini S                          | Developer    | Database models, CRUD operations, PostgreSQL testing                               |
+| 5          | Kota Veera Venkata Satya Sai Tarun Kumar | Developer    | To be assigned                                                                     |
+| 6          | Aayush Barik                             | Developer    | Frontend components, Responsive design, API integration                            |
+| 7          | Dasari Vishal                            | Developer    | Backend logic, API integration with frontend                                       |
+| 8          | Adarsh Rai                               | Developer    | REST APIs, Validation, Error handling, Postman testing                             |
+| 9          | Vikas Das                                | Developer    | Backend API integration, Data handling between frontend & backend                  |
+| 10         | Aryan Gotiwale                           | Developer    | Frontend responsiveness & UI consistency                                           |
+
+---
+
+## 📌 Project Setup
+
+### 1. Prerequisites
+
+* Node.js (LTS recommended) → [Download](https://nodejs.org/)
+* PostgreSQL → [Download](https://www.postgresql.org/download/)
+* npm or yarn
+
+### 2. Initialize Project
 
 ```bash
-git clone https://github.com/your-username/bluestock-ipo-app.git
-cd bluestock-ipo-app
+mkdir bluestock-ipo
+cd bluestock-ipo
+npm init -y
+npm install express sequelize pg pg-hstore dotenv nodemon
 ```
 
-### 2. Install Dependencies
+### 3. Environment Variables (`.env`)
 
-```bash
-npm install
-```
-
-### 3. Configure Environment Variables
-
-Create a `.env` file in the root directory:
-
-```
-PORT=5000
-DB_USER=your_postgres_user
-DB_PASSWORD=your_postgres_password
+```ini
+DB_NAME=bluestock_ipo
+DB_USER=your_username
+DB_PASSWORD=your_password
 DB_HOST=localhost
 DB_PORT=5432
-DB_NAME=ipo_db
 JWT_SECRET=your_secret_key
 ```
 
-### 4. Database Setup
+Add `.env` to `.gitignore`:
 
-Run the schema in `pgAdmin` or psql:
-
-```sql
-CREATE DATABASE ipo_db;
-
--- Example table
-CREATE TABLE companies (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
-  sector VARCHAR(255),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+```gitignore
+node_modules/
+.env
 ```
 
-### 5. Start the Server
+### 4. Project Structure
 
-```bash
-npm run dev
+```
+bluestock-ipo/
+│── backend/
+│   ├── config/            # Database config
+│   ├── models/            # Sequelize models
+│   ├── routes/            # API routes
+│   ├── controllers/       # Business logic
+│   ├── index.js
+│
+│── database/
+│   ├── schema.sql
+│   ├── seed.sql
+│
+│── frontend/              # Bootstrap UI
+│── README.md
 ```
 
 ---
 
-## 📊 API Endpoints
+## 🌐 REST API Endpoints
 
-### Authentication
-
-* `POST /api/register` → Register user
-* `POST /api/login` → Login user
-
-### IPO Data
-
-* `GET /api/ipos` → Get all IPOs
-* `GET /api/upcoming` → Get upcoming IPOs
-* `GET /api/ipos/:id` → Get IPO by ID
-* `POST /api/ipo` → Add new IPO (Admin)
-* `PUT /api/iposupdate/:id` → Update IPO
-* `DELETE /api/iposdlt/:id` → Delete IPO
-
-### User Data
-
-* `GET /api/users/:id` → Get user profile
-* `GET /api/watchlists/:user_id` → Get user’s watchlist
-* `POST /api/watchlists/:user_id` → Add IPO to watchlist
+* `GET /api/ipos` → Fetch all IPOs
+* `GET /api/ipos/:id` → Fetch IPO by ID
+* `POST /api/ipos` → Add new IPO
+* `PUT /api/ipos/:id` → Update IPO
+* `DELETE /api/ipos/:id` → Delete IPO
 
 ---
 
-## 📷 Screenshots
+## 🎨 Frontend
 
-### Homepage
-
-![Homepage](docs/screenshots/homepage.png)
-
-### IPO Dashboard
-
-![IPO Dashboard](docs/screenshots/dashboard.png)
+* Responsive IPO listings (Bootstrap 5 grid)
+* IPO details page with company info & PDFs
+* Fetch API for backend integration
 
 ---
 
-## 🚀 Deployment
+## 🔗 Resources
 
-* **Backend + Frontend** deployed on **Render** (monorepo setup).
-* Connected to PostgreSQL cloud database with environment variables.
-
----
-
-## 🧑‍💻 My Contribution
-
-* Led **backend development**: API routes, authentication, database schema
-* Designed PostgreSQL schema from scratch
-* Configured and deployed app on Render
-* Managed project with **Notion + GitHub**
-* Integrated frontend with backend APIs
-* Conducted testing with Postman
+* [Bluestock Website](http://www.bluestock.in/)
+* [Express.js Docs](https://expressjs.com/)
+* [Sequelize Docs](https://sequelize.org/)
+* [PostgreSQL Docs](https://www.postgresql.org/docs/)
+* [Figma UI/UX Design](https://www.figma.com/design/IyF5MKCS7GP2ChFBOiWXAK/bluestock-fintech-ui-ux-team?node-id=0-1)
+* [System Design Board](https://www.figma.com/board/g9bjreevYNJkfMuwRacyaP/System-Design?t=rhom7O3DRl5pdHkG-1)
 
 ---
 
-## 📚 Learning Outcomes
+## 📌 Work Guidelines
 
-* End-to-end experience of **building & deploying a full-stack app**
-* Practical knowledge of REST API development and database design
-* Collaboration and version control with GitHub
-* Deployment practices with cloud platforms
-
----
-
-## 📖 License
-
-This project was developed as part of my internship at **Bluestock Fintech**.
-For academic and educational purposes only.
+* ✅ Use Notion & Google Workspace for task tracking
+* ✅ Push code daily to GitHub (tested & clean)
+* ✅ Join daily team meet at **6:00 PM** → [Google Meet Link](https://meet.google.com/zih-fsxx-spc)
+* ✅ Communicate blockers early
 
 ---
 
-## 👨‍💻 Author
+## ✅ Daily Standup Format
 
-**Vishwajeet Shrikrishna Deshmane**
-B.E. Computer Engineering, Savitribai Phule Pune University
+* What was completed yesterday?
+* What will be worked on today?
+* Any blockers/issues faced?
+* Estimated completion time?
+
+---
+
+## 📖 Final Notes
+
+This is a **production-level project**. Maintain clean code, test thoroughly, respect deadlines, and collaborate effectively.
+
+🚀 Let’s build something impactful together!
