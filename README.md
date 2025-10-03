@@ -1,18 +1,19 @@
+
 # 📈 Bluestock IPO Information Web Application
 
-A **full-stack web application & REST API** developed during my internship at **Bluestock Fintech**.
+A **full-stack web application & REST API** developed during my internship at **Bluestock Fintech**.  
 The application provides **real-time IPO (Initial Public Offering) information** with secure backend APIs and a responsive frontend.
 
 ---
 
 ## 🚀 Project Overview
 
-* **Company:** Bluestock Fintech
-* **Website:** [Bluestock Website](http://www.bluestock.in/)
-* **Project Type:** Web Application & REST API
-* **Tech Stack:** Node.js (Express.js), PostgreSQL, Bootstrap 5, JavaScript
+* **Company:** Bluestock Fintech  
+* **Website:** [Bluestock Website](http://www.bluestock.in/)  
+* **Project Type:** Web Application & REST API  
+* **Tech Stack:** Node.js (Express.js), PostgreSQL, Bootstrap 5, JavaScript  
 
-📅 **Start Date:** 02/02/2025
+📅 **Start Date:** 02/02/2025  
 📅 **Deadline:** Flexible (as per team lead)
 
 ---
@@ -21,36 +22,36 @@ The application provides **real-time IPO (Initial Public Offering) information**
 
 Develop a scalable application to share IPO-related data with the public, including:
 
-* ✅ Company Name & Logo
-* ✅ IPO Price, Listing Date, Market Price
-* ✅ Issue Size, Type, Status
+* ✅ Company Name & Logo  
+* ✅ IPO Price, Listing Date, Market Price  
+* ✅ Issue Size, Type, Status  
 * ✅ Downloadable RHP & DRHP PDFs
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Backend:** Node.js with Express.js (RESTful APIs)
-**Database:** PostgreSQL (pgAdmin for management)
-**Frontend:** HTML, CSS, Bootstrap 5, JavaScript
-**Tools:** GitHub, Postman, Notion, Google Workspace
+* **Backend:** Node.js with Express.js (RESTful APIs)  
+* **Database:** PostgreSQL (pgAdmin for management)  
+* **Frontend:** HTML, CSS, Bootstrap 5, JavaScript  
+* **Tools:** GitHub, Postman, Notion, Google Workspace
 
 ---
 
-## 👨‍💻 Team Members
+## 👨‍💻 Team Members & Contributions
 
-| **SR. No** | **Name**                                 | **Role**     | **Assigned Task**                                                                  |
-| ---------- | ---------------------------------------- | ------------ | ---------------------------------------------------------------------------------- |
-| 1          | Vishwajeet Shrikrishna Deshmane          | Team Lead    | GitHub setup, JWT Authentication, PostgreSQL schema design, CRUD APIs, Integration |
-| 2          | Venkata Akash Kumar Yeginati             | Co-Team Lead | Backend logic, Core API routes, Node.js + PostgreSQL integration, Authentication   |
-| 3          | Prerna Rahul Waghmare                    | Developer    | Frontend UI (Bootstrap 5), IPO listings, Company fetch & integration               |
-| 4          | Priyadarshini S                          | Developer    | Database models, CRUD operations, PostgreSQL testing                               |
-| 5          | Kota Veera Venkata Satya Sai Tarun Kumar | Developer    | To be assigned                                                                     |
-| 6          | Aayush Barik                             | Developer    | Frontend components, Responsive design, API integration                            |
-| 7          | Dasari Vishal                            | Developer    | Backend logic, API integration with frontend                                       |
-| 8          | Adarsh Rai                               | Developer    | REST APIs, Validation, Error handling, Postman testing                             |
-| 9          | Vikas Das                                | Developer    | Backend API integration, Data handling between frontend & backend                  |
-| 10         | Aryan Gotiwale                           | Developer    | Frontend responsiveness & UI consistency                                           |
+| **SR. No** | **Name**                                 | **Role**     | **Contributions**                                                          |
+| ---------- | ---------------------------------------- | ------------ | -------------------------------------------------------------------------- |
+| 1          | **Vishwajeet Shrikrishna Deshmane**      | Team Lead    | Backend, API routes/endpoints, Database, some frontend & remaining tasks   |
+| 2          | Venkata Akash Kumar Yeginati             | Co-Team Lead | Contributed nothing to project                                             |
+| 3          | Prerna Rahul Waghmare                    | Developer    | 4–5 pages of frontend, left project on March 22nd                          |
+| 4          | Priyadarshini S                          | Developer    | Database schema & models                                                   |
+| 5          | Kota Veera Venkata Satya Sai Tarun Kumar | Developer    | Contributed nothing to project                                             |
+| 6          | **Aayush Barik**                         | Developer    | Managed frontend, implemented multiple pages and responsive design         |
+| 7          | Dasari Vishal                            | Developer    | Contributed nothing to project                                             |
+| 8          | Adarsh Rai                               | Developer    | Contributed nothing to project                                             |
+| 9          | Vikas Das                                | Developer    | Contributed nothing to project                                             |
+| 10         | Aryan Gotiwale                           | Developer    | Contributed nothing to project                                             |
 
 ---
 
@@ -58,8 +59,8 @@ Develop a scalable application to share IPO-related data with the public, includ
 
 ### 1. Prerequisites
 
-* Node.js (LTS recommended) → [Download](https://nodejs.org/)
-* PostgreSQL → [Download](https://www.postgresql.org/download/)
+* Node.js (LTS recommended) → [Download](https://nodejs.org/)  
+* PostgreSQL → [Download](https://www.postgresql.org/download/)  
 * npm or yarn
 
 ### 2. Initialize Project
@@ -69,11 +70,11 @@ mkdir bluestock-ipo
 cd bluestock-ipo
 npm init -y
 npm install express sequelize pg pg-hstore dotenv nodemon
-```
+````
 
 ### 3. Environment Variables (`.env`)
 
-```ini
+```init
 DB_NAME=bluestock_ipo
 DB_USER=your_username
 DB_PASSWORD=your_password
@@ -93,18 +94,31 @@ node_modules/
 
 ```
 bluestock-ipo/
-│── backend/
-│   ├── config/            # Database config
-│   ├── models/            # Sequelize models
-│   ├── routes/            # API routes
-│   ├── controllers/       # Business logic
-│   ├── index.js
+│── backend/                     # Node.js Backend
+│   ├── config/
+│   │   └── database.js          # PostgreSQL Connection
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Company.js
+│   │   ├── IPO.js
+│   │   └── Subscription.js
+│   ├── routes/
+│   │   ├── userRoutes.js
+│   │   ├── companyRoutes.js
+│   │   ├── ipoRoutes.js
+│   │   └── subscriptionRoutes.js
+│   ├── controllers/
+│   │   ├── userController.js
+│   │   ├── companyController.js
+│   │   ├── ipoController.js
+│   │   └── subscriptionController.js
+│   └── index.js
 │
 │── database/
-│   ├── schema.sql
-│   ├── seed.sql
+│   ├── schema.sql               # Database Schema
+│   └── seed.sql                 # Sample Data
 │
-│── frontend/              # Bootstrap UI
+│── frontend/                     # Bootstrap UI (if needed)
 │── README.md
 ```
 
@@ -137,28 +151,5 @@ bluestock-ipo/
 * [Figma UI/UX Design](https://www.figma.com/design/IyF5MKCS7GP2ChFBOiWXAK/bluestock-fintech-ui-ux-team?node-id=0-1)
 * [System Design Board](https://www.figma.com/board/g9bjreevYNJkfMuwRacyaP/System-Design?t=rhom7O3DRl5pdHkG-1)
 
----
 
-## 📌 Work Guidelines
 
-* ✅ Use Notion & Google Workspace for task tracking
-* ✅ Push code daily to GitHub (tested & clean)
-* ✅ Join daily team meet at **6:00 PM** → [Google Meet Link](https://meet.google.com/zih-fsxx-spc)
-* ✅ Communicate blockers early
-
----
-
-## ✅ Daily Standup Format
-
-* What was completed yesterday?
-* What will be worked on today?
-* Any blockers/issues faced?
-* Estimated completion time?
-
----
-
-## 📖 Final Notes
-
-This is a **production-level project**. Maintain clean code, test thoroughly, respect deadlines, and collaborate effectively.
-
-🚀 Let’s build something impactful together!
